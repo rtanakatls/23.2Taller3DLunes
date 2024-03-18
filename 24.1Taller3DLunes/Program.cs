@@ -10,8 +10,9 @@ namespace Taller3D
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test");
-            Console.ReadLine();
+            Example1 example1 = new Example1();
+            example1.Execute();
+
         }
     }
 }
