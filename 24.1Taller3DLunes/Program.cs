@@ -10,9 +10,10 @@ namespace Taller3D
     {
         static void Main(string[] args)
         {
-            Example1 example1 = new Example1();
-            example1.Execute();
-
+            Exercise1 exercise1 = new Exercise1();
+            exercise1.Rectangle();
+            exercise1.Triangle();
+            Console.ReadLine();
         }
     }
 }
