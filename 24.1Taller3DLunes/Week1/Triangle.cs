@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Taller3D
 {
-    internal class Triangle
+    internal class Triangle : Shape
     {
         private float b;
         private float h;
 
-        public Triangle(float b, float h)
+        public Triangle(string name, float b, float h)
         {
             this.b = b;
             this.h = h;
+            this.name = name;
         }
 
-        public float GetArea()
+        public override float GetArea()
         {
             return (b * h) / 2;
         }

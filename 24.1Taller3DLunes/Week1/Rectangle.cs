@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Taller3D
 {
-    internal class Rectangle
+    internal class Rectangle : Shape
     {
         private float b;
         private float h;
 
-        public Rectangle(float b, float h)
+        public Rectangle(string name, float b, float h)
         {
             this.b = b;
             this.h = h;
+            this.name = name;
         }
 
-        public float GetArea()
+        public override float GetArea()
         {
             return b * h;
         }
