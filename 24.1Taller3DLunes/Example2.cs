@@ -10,14 +10,65 @@ namespace Taller3D
     {
         public void Execute()
         {
-            Shape[] shapeArray=new Shape[2];
-            shapeArray[0] = new Rectangle("Rectángulo", 5, 10);
-            shapeArray[1] = new Triangle("Triángulo", 5, 10);
+            bool continueFlag = true;
 
-            for (int i = 0; i < shapeArray.Length; i++)
+            while(continueFlag)
             {
-                Console.WriteLine($"El área del {shapeArray[i].Name} es {shapeArray[i].GetArea()}");
+                Shape shape = null;
+                Console.WriteLine("Introduce el número de la figura que deseas crear");
+                Console.WriteLine("1. Círculo");
+                Console.WriteLine("2. Rectángulo");
+                Console.WriteLine("3. Triángulo");
+                Console.WriteLine("4. Salir");
+                string option= Console.ReadLine();
+                switch(option)
+                {
+                    case "1":
+                        shape = GetCircle();
+                        break;
+                    case "2":
+                        shape = GetRectangle();
+                        break;
+                    case "3":
+                        shape = GetTriangle();
+                        break;
+                    case "4":
+                        continueFlag = false;
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válida");
+                        break;
+                }
+
+                if (shape != null)
+                {
+                    Console.WriteLine($"El área de {shape.Name} es {shape.GetArea()}");
+                }
             }
+        }
+
+        private Circle GetCircle()
+        {
+            Console.WriteLine("Introduce el radio del círculo");
+            float radius = float.Parse(Console.ReadLine());
+            return new Circle("Círculo",radius);
+        }
+
+        private Rectangle GetRectangle()
+        {
+            Console.WriteLine("Introduce la base del rectángulo");
+            float width= float.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce la altura del rectángulo");
+            float height = float.Parse(Console.ReadLine());
+            return new Rectangle("Rectángulo",width,height);
+        }
+        private Triangle GetTriangle()
+        {
+            Console.WriteLine("Introduce la base del triángulo");
+            float width = float.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce la altura del triángulo");
+            float height = float.Parse(Console.ReadLine());
+            return new Triangle("Triángulo", width, height);
 
         }
 
