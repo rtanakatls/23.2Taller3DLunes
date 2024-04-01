@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Taller3D.Week3;
 
 namespace Taller3D
 {
@@ -10,9 +11,8 @@ namespace Taller3D
     {
         static void Main(string[] args)
         {
-            Example2 example2 = new Example2();
-            example2.Execute();
-            Console.ReadLine();
+            InventoryExercise inventoryExercise = new InventoryExercise();
+            inventoryExercise.Execute();
         }
     }
 }

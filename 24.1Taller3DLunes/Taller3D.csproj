@@ -52,6 +52,17 @@
     <Compile Include="Week1\Rectangle.cs" />
     <Compile Include="Week1\Shape.cs" />
     <Compile Include="Week1\Triangle.cs" />
+    <Compile Include="Week3\Arrow.cs" />
+    <Compile Include="Week3\Bow.cs" />
+    <Compile Include="Week3\Bullet.cs" />
+    <Compile Include="Week3\InventoryExercise.cs" />
+    <Compile Include="Week3\Item.cs" />
+    <Compile Include="Week3\MeleeWeapon.cs" />
+    <Compile Include="Week3\Pistol.cs" />
+    <Compile Include="Week3\Projectile.cs" />
+    <Compile Include="Week3\RangeWeapon.cs" />
+    <Compile Include="Week3\Sword.cs" />
+    <Compile Include="Week3\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
